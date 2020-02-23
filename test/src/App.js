@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState}  from 'react';
 import HooksExample from './HookExample';
+import Donut from './Donut';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [amount, setCount] = useState(0);
   return (
     <div className="App">
       <header className="App-header">
@@ -20,6 +22,8 @@ function App() {
           Learn React
         </a>
         <HooksExample />
+        <Donut amount={amount}/>
+        <button onClick={() => setCount(amount+1)} > +</button>
       </header>
     </div>
   );
