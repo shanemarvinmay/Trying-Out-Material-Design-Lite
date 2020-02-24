@@ -3,19 +3,19 @@ import DonutChart from 'react-donut-chart';
 
 let Donut = (props) => {
     return (
-        <div>
+        <div style={{margin:"10px",padding:"10px;"}}>
             <DonutChart data={ [
                 {
-                    label: 'Water',
+                    label: '',
                     value: props.amount,
-                    className: 'h20'
+                    className: ''
                 },
                 {
                     label: '',
-                    value: 33,
+                    value: 100 - props.amount,
                     isEmpty: true
                 }
-            ]} colors={['#2e889a']} />
+            ]} colors={['#2e889a']} legend={false} height={175} width={187}/>
         </div>
     );
 };
